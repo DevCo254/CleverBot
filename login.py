@@ -20,7 +20,9 @@ if ans =='n':
             x = int(input())
             if x == '1':
                 print("State your vision")
-                else:
-                    print("whats new")
+                i = input()
+                print(User1+i)
+            else:
+                print("whats new")
     else:
         print("Invalid Username and password")

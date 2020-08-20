@@ -14,8 +14,9 @@ if ans =='n':
     print("account succesfuly registered Please Login")
     User1 = input("please enter your username : ")
     Pass1 = input("enter your password : ")
-    if User1 == (UserList) and Pass1 == (PassList):
-        print("Welcome to Devco")
+    if User1 in UserList:     #is User1 in the list? 
+        if Pass1 == PassList[UserList.index(User1)]:
+            print ("Log in Success")
 
     else:
             print("Invalid Username and password")

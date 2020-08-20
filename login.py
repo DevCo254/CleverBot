@@ -23,6 +23,6 @@ if ans =='n':
                 i = input()
                 print(User1+i)
             else:
-                print("whats new")
+                print(UserList)
     else:
         print("Invalid Username and password")

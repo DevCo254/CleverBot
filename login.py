@@ -16,7 +16,11 @@ if ans =='n':
     Pass1 = input("enter your password : ")
     if User1 in UserList:     #is User1 in the list? 
         if Pass1 == PassList[UserList.index(User1)]:
-            print ("Log in Success")
-
+            print ("Log in Success /n enter 1 if you are new 2 if not")
+            x = int(input())
+            if x == '1':
+                print("State your vision")
+                else:
+                    print("whats new")
     else:
-            print("Invalid Username and password")
+        print("Invalid Username and password")

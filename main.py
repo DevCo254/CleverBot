@@ -11,7 +11,7 @@ p = int(input())
 print('Time :')
 t = int(input())
 print('Interest rate :')
-r = int(input())
+r = float(input())
 
 si=str((p*r*t)/100)
 

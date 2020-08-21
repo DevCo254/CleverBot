@@ -19,8 +19,7 @@ if ans =='n':
             print ("Log in Success /n enter 1 if you are new 2 if not")
             x = int(input())
             if x == '1':
-                print("State your vision")
-                i = input()
+                i = input("State your vision")
                 print(User1+i)
             else:
                 print(UserList)

@@ -21,4 +21,9 @@ service = OAuth2Service(
 redirect_uri ='https://wakatime.com/oauth/test'
 state = hashlib.sha1(os.urandom(40)).hexdigest()
 params = {'scope':'email,read_stats',
-        'response_type':}
+        'response_type':'code',
+        'state': state,
+        'redirect_uri':redirect_uri}
+
+url = service.get_authorize_url(**params)
+

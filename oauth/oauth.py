@@ -27,3 +27,19 @@ params = {'scope':'email,read_stats',
 
 url = service.get_authorize_url(**params)
 
+print('** visit this url in your browser****'.format(url=url))
+print('*'*80)
+print(url)
+print('*'*80)
+print('**** After clicking Authorize, paste code here and press Enter ****')
+code = raw_input('enter code from url :')
+
+headers ={'Accept':'application/x-www-form-urlencoded'}
+print('Getting an access token...')
+session = service.get_auth_session(headers=headers,
+                                data={'code':code,
+                                    'grant_type':'authorization_code',
+                                    'redirect_uri': redirect_uri})
+
+print('Getting current user from API...')
+user = session.get('users/current').json()

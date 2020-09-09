@@ -43,3 +43,6 @@ session = service.get_auth_session(headers=headers,
 
 print('Getting current user from API...')
 user = session.get('users/current').json()
+print('Authenticated via OAuth as {0}'.format(user['data']['email']))
+print("Getting users coding stats from API...")
+print(sats.text)
